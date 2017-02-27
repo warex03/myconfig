@@ -1,0 +1,2 @@
+# myconfig
+My favorite configurations
