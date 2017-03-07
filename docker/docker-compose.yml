@@ -1,0 +1,54 @@
+version: "2"
+
+services:
+  frontend:
+    image: <project>_frontend
+    build: ./frontend
+    ports:
+      - 5000:5000
+    volumes:
+      - ./frontend:/<project>_frontend
+      - front_modules:/<project>_frontend/node_modules
+      - front_cache:/usr/local/share/.cache/yarn
+    networks:
+      - <project>
+    cpu_quota: 50000
+    cpuset: "1"
+  backend:
+    image: <project>_backend
+    depends_on:
+      - db
+    build: ./backend
+    expose:
+      - "3000"
+    volumes:
+      - ./backend:/<project>_backend
+      - bundle_cache:/bundle_cache
+    cpu_quota: 50000
+    networks:
+      - <project>
+    cpuset: "0"
+    # tty: true
+  db:
+    image: mariadb
+    ports:
+      - 3336:3306
+    volumes:
+      - database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    networks:
+      - <project>
+  memcached:
+    image: memcached
+    networks:
+      - <project>
+
+volumes:
+  database:
+  bundle_cache:
+  front_cache:
+  front_modules:
+
+networks:
+  <project>:

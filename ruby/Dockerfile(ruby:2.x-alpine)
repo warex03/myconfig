@@ -1,0 +1,20 @@
+FROM ruby:2.4-alpine
+
+# Install system dependencies
+RUN apk update && \
+    apk upgrade && \
+    apk add build-base mariadb-dev mysql-client nodejs \
+            libxml2-dev libxslt-dev tzdata
+
+# Set environment variables
+ENV APPNAME backend
+ENV INSTALL_PATH /$APPNAME
+ENV BUNDLE_PATH /bundle_cache
+
+ADD . $INSTALL_PATH
+# RUN mkdir $INSTALL_PATH
+WORKDIR $INSTALL_PATH
+
+RUN bundle install
+
+CMD bundle exec rails s -b 0.0.0.0
