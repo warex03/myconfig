@@ -1,0 +1,27 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.tabSize": 2,
+  "files.hotExit": "onExitAndWindowClose",
+  "editor.scrollBeyondLastLine": false,
+  "explorer.autoReveal": false,
+  "git.ignoreLegacyWarning": true,
+  "git.enableCommitSigning": true,
+  "editor.tabCompletion": true,
+  "workbench.editor.showIcons": false,
+  "explorer.openEditors.visible": 0,
+  "zenMode.hideTabs": false,
+  "zenMode.hideStatusBar": false,
+  "window.restoreWindows": "all",
+  "workbench.iconTheme": null,
+  "editor.links": false,
+  "editor.multiCursorModifier": "alt",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 0,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "extensions.autoUpdate": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "[elixir]": {},
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.fontSize": 18
+}
