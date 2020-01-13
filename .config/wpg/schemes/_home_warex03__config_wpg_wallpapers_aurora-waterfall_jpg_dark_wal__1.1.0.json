@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/warex03/.config/wpg/wallpapers/aurora-waterfall.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0d110f",
+        "foreground": "#accbbe",
+        "cursor": "#accbbe"
+    },
+    "colors": {
+        "color0": "#0d110f",
+        "color1": "#364B4F",
+        "color2": "#386261",
+        "color3": "#475C58",
+        "color4": "#4C706B",
+        "color5": "#599A74",
+        "color6": "#70C87A",
+        "color7": "#accbbe",
+        "color8": "#788e85",
+        "color9": "#364B4F",
+        "color10": "#386261",
+        "color11": "#475C58",
+        "color12": "#4C706B",
+        "color13": "#599A74",
+        "color14": "#70C87A",
+        "color15": "#accbbe"
+    }
+}
